@@ -9,11 +9,13 @@ import java.util.List;
 public class UsersView implements View {
   private Controller controller;
   
-  
-  
   @Override
   public void refresh(ModelData modelData) {
-    System.out.println("All users");
+    if(!modelData.isDisplayDeletedUserList()) {
+      System.out.println("All users:");
+    } else {
+      System.out.println("All deleted users:");
+    }
     List<User> users = modelData.getUsers();
     for(User user : users) {
       System.out.println(user + "\t");
