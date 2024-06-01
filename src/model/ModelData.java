@@ -5,6 +5,7 @@ import bean.User;
 import java.util.List;
 
 public class ModelData {
+  private List<User> users;
   private User activeUser;
   private boolean displayDeletedUserList;
   
@@ -24,7 +25,7 @@ public class ModelData {
     this.activeUser = activeUser;
   }
   
-  private List<User> users;
+  
   
   public List<User> getUsers() {
     return users;

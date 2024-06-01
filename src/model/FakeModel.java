@@ -6,7 +6,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class FakeModel implements Model{
+  @Override
+  public void deleteUserById(long id) {
+    throw new UnsupportedOperationException("Unsupported operation");
+  }
+  
   private ModelData modelData = new ModelData();
+  
+  @Override
+  public void loadUserById(long userId) {
+    throw new UnsupportedOperationException("Unsupported operation");
+  }
   
   @Override
   public void loadDeletedUsers() {

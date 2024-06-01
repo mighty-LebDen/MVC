@@ -18,7 +18,7 @@ public class UsersView implements View {
     }
     List<User> users = modelData.getUsers();
     for(User user : users) {
-      System.out.println(user + "\t");
+      System.out.println("\t" + user);
     }
     System.out.println("===================================================");
   }
@@ -34,5 +34,9 @@ public class UsersView implements View {
   
   public void fireEventShowDeletedUsers() {
     controller.onShowAllDeletedUsers();
+  }
+  
+  public void fireEventOpenUserEditForm(long id) {
+    controller.onOpenUserEditForm(id);
   }
 }

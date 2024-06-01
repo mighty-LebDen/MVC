@@ -21,6 +21,14 @@ public class Controller {
     usersView.refresh(this.model.getModelData());
   }
   
+  public void refreshEditView() {
+    editUserView.refresh(this.model.getModelData());
+  }
+  
+  public void refreshDelete() {
+    editUserView.refreshDeleted(this.model.getModelData());
+  }
+  
   public void setUsersView(UsersView usersView) {
     this.usersView = usersView;
   }
@@ -31,6 +39,16 @@ public class Controller {
   
   public void onShowAllDeletedUsers() {
     model.loadDeletedUsers();
+    this.refreshView();
+  }
+  
+  public void onOpenUserEditForm(long userId) {
+    model.loadUserById(userId);
+    this.refreshEditView();
+  }
+  
+  public void onUserDelete(long userId) {
+    model.deleteUserById(userId);
     this.refreshView();
   }
 }
