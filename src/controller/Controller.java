@@ -51,4 +51,9 @@ public class Controller {
     model.deleteUserById(userId);
     this.refreshView();
   }
+  
+  public void onUserChange(String name, long id, int level) {
+    model.changeUserData(name, id, level);
+    this.refreshView();
+  }
 }

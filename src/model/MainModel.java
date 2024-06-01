@@ -25,6 +25,13 @@ public class MainModel implements Model {
   }
   
   @Override
+  public void changeUserData(String name, long id, int level) {
+    userService.createOrUpdateUser(name, id, level);
+    List<User> users = this.getAllUsers();
+    modelData.setUsers(users);
+  }
+  
+  @Override
   public void loadDeletedUsers() {
     List<User> users = userService.getAllDeletedUsers();
     modelData.setUsers(users);

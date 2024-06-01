@@ -11,6 +11,11 @@ public class FakeModel implements Model{
     throw new UnsupportedOperationException("Unsupported operation");
   }
   
+  @Override
+  public void changeUserData(String name, long id, int level) {
+    throw new UnsupportedOperationException("Unsupported operation");
+  }
+  
   private ModelData modelData = new ModelData();
   
   @Override

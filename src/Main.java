@@ -21,10 +21,9 @@ public class Main {
     usersView.fireEventOpenUserEditForm(126L);
     editUserView.fireEventUserDeleted(124L);
     usersView.fireEventShowDeletedUsers();
+    editUserView.fireEventUserChanged("Lebedev", 126L, 99);
     usersView.fireEventShowAllUsers();
-    
-    
-    //fireEventShowAllUsers(), fireEventOpenUserEditForm(126L), fireEventUserDeleted(124L), fireEventShowDeletedUsers().
+    usersView.fireEventShowAllUsers();
     
     
   }
